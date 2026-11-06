@@ -1,0 +1,114 @@
+{
+  "box_fill": [
+    {
+      "id": "single_gang_switch_14awg",
+      "description": "Single-gang switch box with two 14/2 NM cables, internal clamps, 1 switch, 2 grounds",
+      "input": {
+        "conductors": [
+          { "awg": "14", "count": 4 }
+        ],
+        "has_internal_clamps": true,
+        "support_fittings_count": 0,
+        "devices": [
+          { "yokes": 1, "largest_awg": "14" }
+        ],
+        "ground_conductors": [
+          { "awg": "14", "count": 2 }
+        ]
+      },
+      "expected": {
+        "total_cu_in": 16.0,
+        "total_cm3": 262.19,
+        "breakdown_count": 4
+      }
+    },
+    {
+      "id": "two_gang_mixed_12_14awg",
+      "description": "Two-gang box with three 14/2 NM and two 12/2 NM cables, internal clamps, 1 switch (#14), 1 receptacle (#12), 5 grounds (#14 and #12)",
+      "input": {
+        "conductors": [
+          { "awg": "14", "count": 6 },
+          { "awg": "12", "count": 4 }
+        ],
+        "has_internal_clamps": true,
+        "support_fittings_count": 0,
+        "devices": [
+          { "yokes": 1, "largest_awg": "14" },
+          { "yokes": 1, "largest_awg": "12" }
+        ],
+        "ground_conductors": [
+          { "awg": "14", "count": 3 },
+          { "awg": "12", "count": 2 }
+        ]
+      },
+      "expected": {
+        "total_cu_in": 34.56,
+        "total_cm3": 566.34,
+        "breakdown_count": 6
+      }
+    },
+    {
+      "id": "luminaire_box_with_hickey",
+      "description": "Octagonal box with 4x #14 AWG, 1 fixture stud / hickey, no clamps, 2x #14 EGC",
+      "input": {
+        "conductors": [
+          { "awg": "14", "count": 4 }
+        ],
+        "has_internal_clamps": false,
+        "support_fittings_count": 1,
+        "devices": [],
+        "ground_conductors": [
+          { "awg": "14", "count": 2 }
+        ]
+      },
+      "expected": {
+        "total_cu_in": 12.0,
+        "total_cm3": 196.64,
+        "breakdown_count": 3
+      }
+    },
+    {
+      "id": "six_egc_grounds_allowance",
+      "description": "Box with 6 #12 AWG EGCs checking 1.5x allowance under NEC 314.16(B)(5)",
+      "input": {
+        "conductors": [
+          { "awg": "12", "count": 6 }
+        ],
+        "has_internal_clamps": false,
+        "support_fittings_count": 0,
+        "devices": [
+          { "yokes": 1, "largest_awg": "12" }
+        ],
+        "ground_conductors": [
+          { "awg": "12", "count": 6 }
+        ]
+      },
+      "expected": {
+        "total_cu_in": 21.38,
+        "total_cm3": 350.36,
+        "breakdown_count": 3
+      }
+    },
+    {
+      "id": "feeder_box_6_and_8_awg",
+      "description": "Feeder junction box with 4x #6 AWG and 2x #8 AWG conductors",
+      "input": {
+        "conductors": [
+          { "awg": "6", "count": 4 },
+          { "awg": "8", "count": 2 }
+        ],
+        "has_internal_clamps": false,
+        "support_fittings_count": 0,
+        "devices": [],
+        "ground_conductors": [
+          { "awg": "8", "count": 1 }
+        ]
+      },
+      "expected": {
+        "total_cu_in": 29.0,
+        "total_cm3": 475.22,
+        "breakdown_count": 3
+      }
+    }
+  ]
+}

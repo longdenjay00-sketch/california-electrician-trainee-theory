@@ -18,6 +18,11 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -26,6 +31,10 @@ jobs:
       - name: Run Vault & Exercises Linter
         run: |
           python tools/check_vault.py
+
+      - name: Run Web Engine Parity Checks
+        run: |
+          node tests/test_box_fill_parity.js
 
       - name: Run Pytest Test Suite
         run: |
