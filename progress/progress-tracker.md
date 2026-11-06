@@ -10,6 +10,7 @@ Track curriculum completion, drills, and theory verification for state certifica
 | :--- | :--- | :--- | :---: | :---: | :---: | :--- |
 | **Grounding & Bonding** | `[[grounding-vs-bonding]]` | Pending | — | — | — | In Review |
 | **Branch Circuit Sizing** | `[[branch-circuit-sizing]]` | `exercises/branch-circuit-sizing.md` | [x] | [x] | [x] | Complete |
+| **Box Fill Calculations** | `[[box-fill]]` | `exercises/box-fill.md` | [x] | [x] | [x] | Complete |
 | **Feeder Calculations** | `[[feeder-calculations]]` | Pending | [ ] | [ ] | [ ] | Planned |
 | **Conduit Fill** | `[[conduit-fill]]` | Pending | [ ] | [ ] | [ ] | Planned |
 | **Motor Branch Circuits** | `[[motor-circuits]]` | Pending | [ ] | [ ] | [ ] | Planned |
