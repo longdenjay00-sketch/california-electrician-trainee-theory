@@ -1,0 +1,40 @@
+name: "Stale Regulation / Code Cycle Report"
+description: "Report an out-of-date California Electrical Code (CEC) or NEC reference"
+title: "[STALE-REG]: "
+labels: ["stale-reg", "code-cycle"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a note or exercise cites a code edition, table, or article number superseded by current California Division of Labor Standards Enforcement (DLSE) or Building Standards Commission (Title 24) standards.
+  - type: input
+    id: file-path
+    attributes:
+      label: File Path & Line
+      description: Location in the repository (e.g., `vault/conductors/ampacity-adjustment.md:42`)
+      placeholder: "vault/...md:line"
+    validations:
+      required: true
+  - type: input
+    id: current-citation
+    attributes:
+      label: Current Citation in Repository
+      description: The cited article, table, or rule (e.g., `NEC 2017 Table 310.15(B)(16)`)
+      placeholder: "e.g., NEC 2017 Table 310.15(B)(16)"
+    validations:
+      required: true
+  - type: input
+    id: updated-citation
+    attributes:
+      label: Updated California Citation
+      description: The active CEC / NEC reference that should replace it
+      placeholder: "e.g., CEC 2022 / NEC 2020 Table 310.16"
+    validations:
+      required: true
+  - type: textarea
+    id: impact-summary
+    attributes:
+      label: Impact on Calculations or Explanations
+      description: Explain what changed (e.g., table renumbering, factor adjustments, definition changes)
+    validations:
+      required: true

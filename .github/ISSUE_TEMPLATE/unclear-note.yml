@@ -1,0 +1,38 @@
+name: "Unclear Note / Exercise Explanation"
+description: "Report ambiguous explanations, missing units, or unclear worked steps"
+title: "[UNCLEAR-NOTE]: "
+labels: ["clarity", "pedagogy"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when a theory note or exercise explanation is ambiguous, lacks units, or fails to walk through the problem logically.
+  - type: input
+    id: note-location
+    attributes:
+      label: Note / Exercise File & Line
+      description: The file path in `/vault` or `/exercises`
+      placeholder: "exercises/branch-circuits/continuous-loads.md:18"
+    validations:
+      required: true
+  - type: textarea
+    id: current-text
+    attributes:
+      label: Confusing or Ambiguous Passage
+      description: Cite the sentence or step causing confusion
+    validations:
+      required: true
+  - type: textarea
+    id: confusion-reason
+    attributes:
+      label: Why is this unclear?
+      description: Explain the missing link, absent unit, or mathematical jump
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-clarification
+    attributes:
+      label: Proposed Clarification
+      description: How should this step be explained or structured?
+    validations:
+      false
